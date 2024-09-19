@@ -36,6 +36,11 @@ git clone git@github.com:DacioMP/ranek.git
 cd ranek/
 npm install
 ```
+3. Executar o projeto
+```bash
+npm run dev
+```
 
-### Autor
+
+## Autor
 Matheus Pedrosa Dácio
