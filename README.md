@@ -33,7 +33,7 @@ git clone git@github.com:DacioMP/ranek.git
 
 2. Instalar as dependências
 ```bash
-cd ranek
+cd ranek/
 npm install
 ```
 
