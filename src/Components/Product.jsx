@@ -25,7 +25,7 @@ const Product = () => {
     fetchProduct(`https://ranekapi.origamid.dev/json/api/produto/${id}`);
   }, [id]);
 
-  if (loading) return <div>Loading product data</div>;
+  if (loading) return <div className="loading"></div>;
   if (error) return <p>{error}</p>;
   if (product === null) return null;
   return (
@@ -34,12 +34,16 @@ const Product = () => {
         title={`Ranek | ${product.nome}`}
         description={`Ranek | Esse é um produto: ${product.nome}`}
       />
-      {product.fotos.map((photo) => (
-        <img key={photo.src} src={photo.src} alt={photo.titulo} />
-      ))}
-      <h1>{product.nome}</h1>
-      <span className={styles.price}>R$ {product.preco}</span>
-      <p className={styles.description}>{product.descricao}</p>
+      <div>
+        {product.fotos.map((photo) => (
+          <img key={photo.src} src={photo.src} alt={photo.titulo} />
+        ))}
+      </div>
+      <div>
+        <h1>{product.nome}</h1>
+        <span className={styles.price}>R$ {product.preco}</span>
+        <p className={styles.description}>{product.descricao}</p>
+      </div>
     </section>
   );
 };
